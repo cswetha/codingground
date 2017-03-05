@@ -1,0 +1,75 @@
+TestCase1: Interrupt/Cpu Read/(HIT || HITM) : Expected Output - Memory Read in SHARED state                                                                                                                   
+=============================================================================================                                                                                                                 
+INVALID/CPU_READ/(HIT || HITM)/Memory Read                                                                                                                                                                    
+SHARED/CPU_READ/X/X                                                                                                                                                                                           
+Shared state Returned                                                                                                                                                                                         
+CPU Operation: MEMORY READ                                                                                                                                                                                    
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase2: Interrupt/Cpu Write/X : Expected Output - RFO in MODIFY state                                                                                                                                      
+=============================================================================================                                                                                                                 
+INTERRUPT/CPU_WRITE/X/RFO                                                                                                                                                                                     
+MODIFY/CPU_READ||CPU_WRITE/X/X                                                                                                                                                                                
+Modify state Returned                                                                                                                                                                                         
+CPU Operation: MEMORY RFO                                                                                                                                                                                     
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase3: Interrupt/Cpu Read/(HIT || HITM)' : Expected Output - Memory Read in EXCLUSIVE state                                                                                                               
+=============================================================================================                                                                                                                 
+INVALID/CPU_READ/(HIT || HITM)'/Memory Read                                                                                                                                                                   
+EXCLUSIVE/CPU_READ/X/X                                                                                                                                                                                        
+Exclusive state Returned                                                                                                                                                                                      
+CPU Operation: MEMORY READ                                                                                                                                                                                    
+=============================================================================================   
+
+
+
+TestCase4: Shared/Cpu Read/X' : Expected Output - Return Shared state                                                                                                                                         
+=============================================================================================                                                                                                                 
+SHARED/CPU_READ/X/X                                                                                                                                                                                           
+Shared state returned                                                                                                                                                                                         
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase5: Shared/Cpu Write/X' : Expected Output - Return Modify state                                                                                                                                        
+=============================================================================================                                                                                                                 
+MODIFY/CPU_WRITE/X/Invalidate*                                                                                                                                                                                
+MODIFY/CPU_READ||CPU_WRITE/X/X                                                                                                                                                                                
+Modify state returned                                                                                                                                                                                         
+CPU Operation: MEMORY INVALIDATE                                                                                                                                                                              
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase6: Modify/Cpu Read/X' : Expected Output - Return Modify state                                                                                                                                         
+=============================================================================================                                                                                                                 
+MODIFY/CPU_READ||CPU_WRITE/X/X                                                                                                                                                                                
+Modify state returned                                                                                                                                                                                         
+=============================================================================================        
+
+
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase7: Modify/Cpu Write/X' : Expected Output - Return Modify state                                                                                                                                        
+=============================================================================================                                                                                                                 
+MODIFY/CPU_READ||CPU_WRITE/X/X                                                                                                                                                                                
+Modify state returned                                                                                                                                                                                         
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase8: Exclusive/Cpu Read/X' : Expected Output - Return Exclusive state                                                                                                                                   
+=============================================================================================                                                                                                                 
+EXCLUSIVE/CPU_READ/X/X                                                                                                                                                                                        
+Exclusive state returned                                                                                                                                                                                      
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              
+TestCase9: Exclusive/Cpu Write/X' : Expected Output - Return Modify state                                                                                                                                     
+=============================================================================================                                                                                                                 
+EXCLUSIVE/CPU_WRITE/X/X                                                                                                                                                                                       
+MODIFY/CPU_READ||CPU_WRITE/X/X                                                                                                                                                                                
+Modify state returned                                                                                                                                                                                         
+=============================================================================================                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                      
